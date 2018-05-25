@@ -1,0 +1,17 @@
+<view class='container'>
+  <view class='page-body page-section-spacing'>
+    <text class="page-section-title">景点狂魔</text>
+    <slider bindchange='touristSiteLevel'></slider>
+    
+    <text class="page-section-title">吃喝玩乐</text>
+    <slider bindchange='relaxLevel'></slider>
+
+    <text class="page-section-title">时间</text>
+    <slider bindchange='timeLevel'></slider>
+
+    <text class="page-section-title"> 节约出行</text>
+    <slider bindchange='savingLevel'></slider>
+    <button bindtap='getmetrics'>取得路线</button>
+  </view>
+
+</view>

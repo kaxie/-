@@ -1,12 +1,13 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/PlanResult/plan",
+    "pages/UserMetrics/metrics"
   ],
   "window":{
-    "backgroundTextStyle":"light",
+    "backgroundTextStyle":"bold",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "漫游",
     "navigationBarTextStyle":"black"
   }
 }
