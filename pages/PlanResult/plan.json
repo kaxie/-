@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText":"漫游-路线",
+  "usingComponents":{
+    "location":"component/location/location"
+  }
+}

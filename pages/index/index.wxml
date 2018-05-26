@@ -13,10 +13,11 @@
     </view>
     <view class='page-body page-section-spacing'>
       <text class='page-section-title'>寻找游玩路线</text>
-      <input placeholder="输入城市" focus="{{focus}}" />
+      <input type='text' maxlength='10' placeholder="输入城市" focus="{{focus}}" 
+      bindinput='cityInput'/>
     </view>
     <view class='page-section-spacing' style='padding-top:60rpx'>
-    <button type="primary" bindtap='finished'>完成</button>
+    <button type="primary" bindtap='finished'>确认</button>
     </view>
   </view>
 </view>

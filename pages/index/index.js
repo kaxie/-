@@ -8,7 +8,8 @@ Page({
     interval: 2000,
     duration: 500,
     previousMargin: 0,
-    nextMargin: 0
+    nextMargin: 0,
+    destination:"dfd"
   },
   changeProperty: function (e) {
     var propertyName = e.currentTarget.dataset.propertyName
@@ -36,9 +37,15 @@ Page({
       duration: e.detail.value
     })
   },
-  finished: function(event){
+  cityInput: function(e){
+    this.setData({
+      destination: e.detail.value
+    })
+    console.log(this.data.destination);
+  },
+  finished: function(e){
     wx.navigateTo({
-      url: "../../pages/UserMetrics/metrics"
+      url: '../UserMetrics/metrics',
     })
   }
 })
