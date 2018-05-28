@@ -102,6 +102,4 @@ button:last-child{
   display: block;
   height: 150px;
 }
-.page-foot{
-  margin-top: 50rpx;
-}
+

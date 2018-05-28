@@ -1,4 +1,5 @@
 <view class='container'>
+  <text>{{city}}（测试用）</text>
   <view class='page-body page-section-spacing'>
     <text class="page-section-title">景点狂魔</text>
     <slider bindchange='touristSiteLevel'></slider>

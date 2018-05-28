@@ -5,14 +5,25 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    city:"",
+    touristSite:0,
+    relax:0,
+    saving:0,
+    time:0
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    this.setData({
+      city: options.metrics[0],
+      touristSite: options.metrics[1],
+      relax: options.metrics[2],
+      time: options.metrics[3],
+      saving: options.metrics[4], })
+      console.log(options.metrics);
+   
   },
 
   /**

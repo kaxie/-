@@ -6,6 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+      city:"",
       touristSite:0,
       relax: 0,
       time: 0,
@@ -17,7 +18,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    this.setData({
+      city: options.city
+    })
   },
 
   /**
@@ -86,13 +89,11 @@ Page({
   },
 
   getmetrics: function (e){
-    metricsResult = {
-      tourist:this.data.touristSite,
-      relax: this.data.relax,
-      time: this.data.time,
-      saving: this.data.saving
-    }
+    metricsResult = [this.data.city,this.data.touristSite,this.data.relax,this.data.time,this.data.saving]
     console.log(metricsResult);
+    wx.navigateTo({
+      url: '../result/result?metrics='+metricsResult,
+    })
   }
 })
 
