@@ -1,10 +1,14 @@
 <!--pages/result/retult.wxml-->
+
 <view >
   <view>
    <view class="container">
-      <button class='select-box'>路线</button>
-      <button class='select-box'>吃的</button>
-      <button class='select-box'>交通</button>
+
+   <navigator>
+   <image src='../../image/icon/route.png'></image>
+   <image src='../../image/icon/food.png'></image>
+   <image src='../../image/icon/traffic.png'></image>
+   </navigator>
    </view>
   </view>
 </view>
