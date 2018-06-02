@@ -19,8 +19,7 @@ Page({
    */
   onLoad: function (options) {
 
-    
-
+  
     this.setData({
       city: options.metrics[0],
       touristSite: options.metrics[1],

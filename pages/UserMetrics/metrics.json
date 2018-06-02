@@ -1,6 +1,4 @@
 {
-  "navigationBarTitleText": "偏好",
-  "usingComponents": {
-    "location": "/component/location/location"
-  }
+  "navigationBarTitleText": "偏好"
+
 }
