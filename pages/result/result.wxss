@@ -15,3 +15,11 @@
   color: blue;
   padding: 0 50rpx;
 }
+
+.map-size{
+  width: 70px;
+  height: 50px;
+  position: absolute;
+  right: 0；
+  
+}

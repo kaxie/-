@@ -1,5 +1,5 @@
 // pages/result/retult.js
-
+var routedata;
 var metrics;
 Page({
 
@@ -84,6 +84,8 @@ Page({
   
   },
   getmap: function(e){
+    routedata = [this.data.departure, this.data.destination]
+    console.log(routedata);
     wx.navigateTo({
       url: '../map/map'
     })
