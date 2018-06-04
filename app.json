@@ -2,7 +2,6 @@
   "pages":[
     
     "pages/index/index",
-    "pages/PlanResult/plan",
     "pages/UserMetrics/metrics",
     "pages/result/result",
     "pages/map/map"
