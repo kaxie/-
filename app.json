@@ -1,10 +1,11 @@
 {
   "pages":[
+    
     "pages/index/index",
+    "pages/PlanResult/plan",
     "pages/UserMetrics/metrics",
     "pages/result/result",
-    "pages/food/food",
-    "pages/traffic/traffic"
+    "pages/map/map"
   ],
   "window":{
     "backgroundTextStyle":"bold",
