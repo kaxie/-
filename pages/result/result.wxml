@@ -3,8 +3,9 @@
 <view >
   <view>
    <view class="container">
-
-  
+    <button bindtap='getmap'>
+    <image src='../../image/icon/mapicon.png'></image>
+    </button>
    </view>
   </view>
 </view>

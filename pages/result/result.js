@@ -82,5 +82,11 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+  getmap: function(e){
+    wx.navigateTo({
+      url: '../map/map'
+    })
   }
 })
+
