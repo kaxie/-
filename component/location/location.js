@@ -1,13 +1,21 @@
 Component({
   properties:{
+    //景点名字
     place:{
       type:string,
-      value:""
+      value:''
     },
+    //景点描述
+    poidescribe:{
+      type:string,
+      value:''
+    },
+    //?
     inThePath:{
       type: Boolean,
       value: true
     },
+    //?
     touristSite:{
       type: Boolean,
       value: true

@@ -1,4 +1,6 @@
 {
-  "navigationBarTitleText":"推荐路线"
-  
+  "navigationBarTitleText":"推荐路线",
+  "usingComponent":{
+    "location":"../component/location/location"
+  }
 }

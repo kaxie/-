@@ -1,14 +1,18 @@
 <!--pages/result/retult.wxml-->
 
-<view >
-  <view>
+<view>
+  <view class='container1'>
   <view class="container">
       <button class='select-box'>路线</button>
       <button class='select-box'>吃的</button>
       <button class='select-box'>交通</button>
    </view>
    <view>
-    <image class="map-size"  bindtap='getmap' src='../../image/icon/mapicon.png'></image>
+    <image class="map-size" bindtap='getmap' src='../../image/icon/mapicon.png'></image>
+   </view>
+   <view>
+   <location place='景点' poidescribe='z' inThePath='true' touristSite='false'>lllllll
+   </location>
    </view>
   </view>
 </view>

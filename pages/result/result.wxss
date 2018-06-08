@@ -10,6 +10,10 @@
   padding: 0 100rpx;
 }
 
+.container1{
+  flex-direction: column
+}
+
 .select-box{
    font-size: 28rpx;
   color: blue;
@@ -23,3 +27,5 @@
   right: 0；
   
 }
+
+  
