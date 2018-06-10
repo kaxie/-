@@ -4,7 +4,9 @@
     "pages/index/index",
     "pages/UserMetrics/metrics",
     "pages/result/result",
-    "pages/map/map"
+    "pages/map/map",
+    "pages/food/food",
+    "pages/traffic/traffic"
   ],
   "window":{
     "backgroundTextStyle":"bold",

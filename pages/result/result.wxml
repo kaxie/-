@@ -4,8 +4,8 @@
   <view>
   <view class="container">
       <button class='select-box'>路线</button>
-      <button class='select-box'>吃的</button>
-      <button class='select-box'>交通</button>
+      <button class='select-box' bindtap='getFood'>吃的</button>
+      <button class='select-box' bindtap='getTraffic'>交通</button>
    </view>
    <view>
     <image class="map-size"  bindtap='getmap' src='../../image/icon/mapicon.png'></image>

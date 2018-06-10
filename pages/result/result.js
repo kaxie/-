@@ -89,6 +89,16 @@ Page({
     wx.navigateTo({
       url: '../map/map'
     })
+  },
+  getTraffic: function(e){
+    wx.navigateTo({
+      url: '../traffic/traffic',
+    })
+  },
+  getFood: function (e) {
+    wx.navigateTo({
+      url: '../food/food',
+    })
   }
 })
 
