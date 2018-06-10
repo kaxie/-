@@ -84,10 +84,10 @@ Page({
   
   },
   getmap: function(e){
-    routedata = [this.data.departure, this.data.destination]
-    console.log(routedata);
+    routedata = [{ latitude: 39.915280, longitude: 116.403853 }, { latitude: 39.915265, longitude: 116.803875 }, { latitude: 39.915260, longitude:116.803870}]
+   console.log(routedata)
     wx.navigateTo({
-      url: '../map/map'
+      url: '../map/map?Rdata='+routedata
     })
   },
   getTraffic: function(e){
