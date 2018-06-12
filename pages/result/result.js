@@ -1,5 +1,6 @@
 // pages/result/retult.js
-var routedata;
+var latitude;
+var longitude;
 var metrics;
 Page({
 
@@ -19,14 +20,13 @@ Page({
    */
   onLoad: function (options) {
 
-  
+   
     this.setData({
       city: options.metrics[0],
       touristSite: options.metrics[1],
       relax: options.metrics[2],
       time: options.metrics[3],
       saving: options.metrics[4], })
-      console.log(options.metrics);
     metrics = {
       city: this.data.city,
       touristSite: this.data.touristSite,
@@ -84,11 +84,13 @@ Page({
   
   },
   getmap: function(e){
-    routedata = [{ latitude: 39.915280, longitude: 116.403853 }, { latitude: 39.915265, longitude: 116.803875 }, { latitude: 39.915260, longitude:116.803870}]
-   console.log(routedata)
+    latitude = ["39.915285", "39.915285","39.915285"]
+    longitude = ["116.403857", "116.803857", "116.903857"]
     wx.navigateTo({
-      url: '../map/map?Rdata='+routedata
+      url: '/pages/map/map?latitude=' + JSON.stringify(latitude) + '&longitude=' + JSON.stringify(longitude)
+      
     })
+  
   }
 })
 

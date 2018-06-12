@@ -1,1 +1,1 @@
-<map id="1" scale='16' markers="{{polyline}}" include-points="{{polyline}}" polyline="{{polyline1}}" style="width:100%; height:1200rpx"></map>
+<map id="1" scale='16' markers="{{polyline}}" include-points="{{polyline}}" polyline="{{finalpolyline}}" style="width:100%; height:1200rpx"></map>

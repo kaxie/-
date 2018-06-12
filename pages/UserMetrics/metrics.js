@@ -21,6 +21,7 @@ Page({
     this.setData({
       city: options.city
     })
+    
   },
 
   /**
