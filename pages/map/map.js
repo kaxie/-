@@ -1,48 +1,38 @@
 var route=[];
 var polyline=[];
-var finalpolyline=[];
+//var =[];
+var polyline1=[];
 Page({
-
-  /**
-   * 页面的初始数据
-   */
-  data: {
-    /**finalpolyline:[],*/
-   /** markers: [{
-      latitude: 39.915280,
-      longitude: 116.403853,
-    }, {
-        latitude: 39.915265,
-        longitude: 116.803875,
-    }]*/
-   /** routepoints: [{
-      latitude:,
-      longitude:
-         }]*/
-    
+  data: {   
+    latitude:[],
+    longitude:[],
+    markpoint:[],
+    finalpolyline:[],
+    polyline2:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var that = this
-    console.log(options)
-     that.setData({
-    polyline:options.Rdata
-     })  
-    /**
-  * api调用
-  */
-  
-  console.log(polyline.length)
-  for(var y=0;y<polyline.length-1;y++)
+      this.data.latitude=JSON.parse(options.latitude),
+     this.data.longitude=JSON.parse(options.longitude)
+      for (var t = 0; t < this.data.latitude.length; t++) {
+        polyline[t] = {
+          latitude: this.data.latitude[t],
+          longitude: this.data.longitude[t]
+        }
+      }
+      // this.setData({
+      //   markpoint:polyline
+      // })
+     var that = this
+     for (var y = 0; y < this.data.latitude.length-1; y++)
   {
     wx.request({
-      url: "https://apis.map.qq.com/ws/direction/v1/walking/?from=" + polyline[y].latitude + "," + polyline[y].longitude + "&to=" + polyline[y + 1].latitude + "," + polyline[y + 1].longitude+"&key=ZWFBZ-VF2WG-NNQQN-I3HA7-6M447-FXFLV",
+      url: 'https://apis.map.qq.com/ws/direction/v1/walking/?from=' + this.data.latitude[y] + ',' + this.data.longitude[y] + '&to='+ this.data.latitude[y+1] + ',' + this.data.longitude[y+1]+'&key=ZWFBZ-VF2WG-NNQQN-I3HA7-6M447-FXFLV',
       method: "GET",
       header: {},
-
       success: function (res) {
         console.log(res)
         if (res.statusCode == 200) {
@@ -52,31 +42,36 @@ Page({
             route[i] = route[i - 2] + route[i] / 1000000
           }
           /**route变为点 */
-          var b = [];
+         var b = [];
           for (var j = 0; j < route.length; j = j + 2) {
             b[j / 2] = {
               latitude: route[j], longitude: route[j + 1]
             };
           }
-        finalpolyline=finalpolyline+b;  
+          that.data.finalpolyline = that.data.finalpolyline.concat(b); 
+          //到这里没有问题，可以顺利生成b
+        console.log(that.data.finalpolyline)
         }
-        wx.hideNavigationBarLoading()
       },
+      
       fail: function () { console.log("fail") },
-      complete: function () { },
+      complete: function () {
+        that.setData({
+          markpoint: polyline,
+          polyline2:[{
+            points: that.data.finalpolyline,
+            color: "#99FF00",
+            width: 4
+          }]
+        })
+        console.log(that.data.finalpolyline)
+       },
     })
-  }
-  this.setData({
-    polyline1: [{
-      points: finalpolyline,
-      color: "#99FF00",
-      width: 4
-    }]
-
-  })
+  }   
+   //  console.log(this.data.finalpolyline)
     
     
-   wx.showNavigationBarLoading()
+  wx.showNavigationBarLoading()
     
   },
 
@@ -85,13 +80,14 @@ Page({
    */
   onReady: function () {
     
+    wx.hideNavigationBarLoading()
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    
+  
   },
 
   /**

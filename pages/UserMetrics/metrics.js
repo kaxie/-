@@ -1,5 +1,5 @@
 var metricsResult;
-
+var get_city;
 Page({
 
   /**
@@ -19,8 +19,10 @@ Page({
    */
   onLoad: function (options) {
     this.setData({
-      city: options.city
+      city: options.city  //第一页得到的城市
+    
     })
+   // console.log(this.data.city)
   },
 
   /**
@@ -89,11 +91,17 @@ Page({
   },
 
   getmetrics: function (e){
-    metricsResult = [this.data.city,this.data.touristSite,this.data.relax,this.data.time,this.data.saving]
+    metricsResult = [this.data.touristSite,this.data.relax,this.data.time,this.data.saving]
+   
+    get_city=this.data.city;
+    console.log(get_city);
     console.log(metricsResult);
     wx.navigateTo({
-      url: '../result/result?metrics='+metricsResult,
+      url: '../result/result?metrics=' + JSON.stringify(metricsResult)+'&getcity='+get_city,
     })
+    // wx.navigateTo({
+    //   url: '../result/result?getcity='+get_city,
+    // })
   }
 })
 
