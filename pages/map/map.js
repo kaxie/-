@@ -6,8 +6,9 @@ Page({
   data: {   
     latitude:[],
     longitude:[],
+    markpoint:[],
     finalpolyline:[],
-    polyline1:[]
+    polyline2:[]
   },
 
   /**
@@ -22,6 +23,9 @@ Page({
           longitude: this.data.longitude[t]
         }
       }
+      // this.setData({
+      //   markpoint:polyline
+      // })
      var that = this
      for (var y = 0; y < this.data.latitude.length-1; y++)
   {
@@ -51,17 +55,22 @@ Page({
       },
       
       fail: function () { console.log("fail") },
-      complete: function () { },
+      complete: function () {
+        that.setData({
+          markpoint: polyline,
+          polyline2:[{
+            points: that.data.finalpolyline,
+            color: "#99FF00",
+            width: 4
+          }]
+        })
+        console.log(that.data.finalpolyline)
+       },
     })
   }   
-     console.log(this.data.finalpolyline)
-     this.setData({
-       polyline1: [{
-         points: this.data.finalpolyline,
-         color: "#99FF00",
-         width: 4
-       }]
-     })
+   //  console.log(this.data.finalpolyline)
+    
+    
   wx.showNavigationBarLoading()
     
   },

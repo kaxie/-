@@ -90,7 +90,7 @@ Page({
   },
   getmap: function(e){
     latitude = ["39.915285", "39.915285","39.915285"]
-    longitude = ["116.403857", "116.803857", "116.903857"]
+    longitude = ["116.403857", "116.405857", "116.407857"]
     wx.navigateTo({
       url: '/pages/map/map?latitude=' + JSON.stringify(latitude) + '&longitude=' + JSON.stringify(longitude)
       
