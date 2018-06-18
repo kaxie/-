@@ -11,7 +11,7 @@
     <image class="map-size" bindtap='getmap' src='../../image/icon/mapicon.png'></image>
    </view>
    <view>
-   <location place='景点' poidescribe='z' inThePath='true' touristSite='false'>lllllll
+   <location place='景点' poidescribe='z' inThePath='true' touristSite='false'>
    </location>
    </view>
   </view>
