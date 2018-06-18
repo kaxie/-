@@ -2,7 +2,6 @@
 var latitude;
 var longitude;
 var metrics;
-var m=[];
 Page({
 
   /**
@@ -21,23 +20,19 @@ Page({
    */
   onLoad: function (options) {
 
-    m = JSON.parse(options.metrics);
+   
     this.setData({
-     // city: options.metrics[0],
-      touristSite: m[0],
-      relax: m[1],
-      time: m[2],
-      saving: m[3], 
-      city:options.getcity
-      })
-      console.log(this.data.city)
+      city: options.metrics[0],
+      touristSite: options.metrics[1],
+      relax: options.metrics[2],
+      time: options.metrics[3],
+      saving: options.metrics[4], })
     metrics = {
       city: this.data.city,
       touristSite: this.data.touristSite,
       relax: this.data.relax,
       time: this.data.time
     }
-    //console.log(metrics)
   },
 
   /**
