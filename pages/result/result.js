@@ -1,6 +1,8 @@
 // pages/result/retult.js
 var routedata;
 var metrics;
+var latitude;
+var longitude;
 
 var relaxCount;
 var tourCount;
@@ -60,8 +62,9 @@ Page({
       header: {},
 
       success: function (res) {
-        console.log(res.data.cluster);
-        console.log(JSON.stringify(res));
+        // console.log(res.data.cluster);
+        // console.log(JSON.stringify(res));
+        console.log(res)
       },
       fail: function () { console.log("fail") },
       complete: function () { },
@@ -72,7 +75,7 @@ Page({
       header: {},
 
       success: function (res) {
-        // console.log(res)
+        console.log(res)
       },
       fail: function () { console.log("fail") },
       complete: function () { },
@@ -160,10 +163,11 @@ Page({
 
   },
   getmap: function (e) {
-    routedata = [{ latitude: 39.915280, longitude: 116.403853 }, { latitude: 39.915265, longitude: 116.803875 }, { latitude: 39.915260, longitude: 116.803870 }]
-    console.log(routedata)
+    latitude = ["39.915285", "39.915285", "39.915285"]
+    longitude = ["116.403857", "116.405857", "116.407857"]
     wx.navigateTo({
-      url: '../map/map?Rdata=' + routedata
+      url: '/pages/map/map?latitude=' + JSON.stringify(latitude) + '&longitude=' + JSON.stringify(longitude)
+
     })
   }
 })
