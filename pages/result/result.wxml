@@ -14,5 +14,12 @@
    <location place='景点' poidescribe='z' inThePath='true' touristSite='false'>
    </location>
    </view>
+   <block>
+    <view class= "rectangles">
+      <location wx:for="{{locations}}" binditemremove="onItemRemove">
+      {{location.content}}
+      </location>
+    </view>
+   </block>
   </view>
 </view>

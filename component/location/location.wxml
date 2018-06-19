@@ -1,4 +1,3 @@
-<view>
-<text>"hahhah"</text>
-<image src='../../image/icon/city.png'></image>
+<view class='wrapper'>
+  <view>address: </view>
 </view> 

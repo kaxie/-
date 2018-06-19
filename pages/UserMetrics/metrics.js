@@ -97,7 +97,7 @@ Page({
     console.log(get_city);
     console.log(metricsResult);
     wx.navigateTo({
-      url: '../result/result?metrics=' + JSON.stringify(metricsResult)+'&getcity='+get_city,
+      url: '../result/result?metrics=' +metricsResult+'&getcity='+get_city,
     })
     // wx.navigateTo({
     //   url: '../result/result?getcity='+get_city,
